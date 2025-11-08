@@ -26,11 +26,9 @@ export default function Navbar() {
         </div>
 
         {/* Wallet balance */}
-        <div className="flex items-center justify-center w-48 h-9 rounded-md bg-gray-300 p-1">
-          <Wallet size={20} className="text-black mr-2" />
-          <span className="text-black font-semibold text-sm">
-            ₦5,270,632.00
-          </span>
+        <div className="flex items-center justify-center w-33 h-9 rounded-md bg-gray-300 p-2">
+          <Wallet size={15} className="text-gray-600 mr-1" />
+          <span className="text-gray-600  text-sm">₦5,270,632.00</span>
         </div>
       </div>
     </nav>

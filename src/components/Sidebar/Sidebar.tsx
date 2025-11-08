@@ -19,7 +19,7 @@ export default function Sidebar() {
     <aside className="flex flex-col w-[20%] h-100 bg-gray-100 rounded-2xl ml-3 mt-[9px]">
       <Link
         href="/"
-        className="flex items-center gap-2 mt-6 mb-2 ml-10 whitespace-nowrap"
+        className="flex items-center gap-1 mt-6 mb-2 ml-4 whitespace-nowrap"
       >
         <Image
           src="/images/esaylight-logo.svg"
@@ -28,7 +28,7 @@ export default function Sidebar() {
           height={30}
           className="object-contain"
         />
-        <h2 className="text-2xl font-bold text-green-800 whitespace-nowrap">
+        <h2 className="text-2xl mr-5 font-bold text-green-800 whitespace-nowrap">
           EASYLIGHT
         </h2>
       </Link>

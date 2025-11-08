@@ -2,6 +2,7 @@ import Sidebar from "@/components/Sidebar/Sidebar";
 import Navbar from "@/components/Navbar/Navbar";
 import OfferCard from "@/components/OfferCard/OfferCard";
 import CategoryFilter from "@/components/CategorySection/CategorySection";
+import PopularProducts from "@/components/PopularProducts/PopularProducts";
 
 export default function Homepage() {
   const offers = [
@@ -38,20 +39,27 @@ export default function Homepage() {
   ];
 
   return (
-    <div className="flex h-screen ">
+    <div className="flex">
       <Sidebar />
 
-      <main className="flex flex-col w-6xl jusify-center align-center mr-3 mt-[-13px] ">
+      <main className="flex flex-col w-6xl   mr-3 mt-[-13px] ">
         <Navbar />
 
-        <h2 className="font-bold font-sans ml-6 mt-3">Special offers</h2>
+        <h2 className="font-bold mt-4 ml-3">Special Offers</h2>
 
-        <div className="flex justify-between h-40 mt-4 ml-3  w-[99%] ">
+        <div className="flex justify-between h-40 ml-3 w-[99%] mt-4 ">
           {offers.map((offer) => (
             <OfferCard key={offer.id} offer={offer} />
           ))}
         </div>
-        <CategoryFilter />
+
+        <div className="mb-3">
+          <CategoryFilter />
+        </div>
+
+        <div>
+          <PopularProducts />
+        </div>
       </main>
     </div>
   );
