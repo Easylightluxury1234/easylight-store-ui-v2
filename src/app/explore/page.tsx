@@ -7,12 +7,11 @@ import PopularProducts, {
 
 export default function Explore() {
   return (
-    <div className="flex">
+    <div className="flex min-h-screen">
       <Sidebar />
       <Main>
         <Navbar />
 
-        {/* Filters */}
         <div className="flex gap-5 ml-3 mt-5">
           <div className="border border-green-800 w-29 h-10 rounded-3xl text-green-700  p-1 text-center font-sans">
             Categories
