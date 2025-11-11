@@ -33,9 +33,21 @@ export default function Sidebar() {
         </h2>
       </Link>
 
-      <div className="flex flex-col items-center gap-4 mt-4 w-full">
+      <div className="flex flex-col items-center gap-9 mt-4 w-full">
         {links.map(({ href, label, icon: Icon }) => {
-          const isActive = pathname === href;
+          const isExploreActive =
+            href === "/explore" &&
+            (pathname.startsWith("/explore") ||
+              pathname.startsWith("/electronics") ||
+              pathname.startsWith("/home-appliances") ||
+              pathname.startsWith("/kitchen-gadgets") ||
+              pathname.startsWith("/cleaning-equipments") ||
+              pathname.startsWith("/smart-home-devices") ||
+              pathname.startsWith("/heating-cooling-systems") ||
+              pathname.startsWith("/laundry-appliances"));
+
+          const isActive = pathname === href || isExploreActive;
+
           return (
             <Link
               key={href}
