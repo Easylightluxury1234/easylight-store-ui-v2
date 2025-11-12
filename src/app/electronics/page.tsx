@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import Image from "next/image";
 import { products } from "@/components/PopularProducts/PopularProducts";
 import { Heart } from "lucide-react";
+import RelatedProducts from "@/components/RelatedProducts/RelatedProducts";
 
 export default function Electronics() {
   const featuredProduct = products[0];
@@ -87,6 +88,22 @@ export default function Electronics() {
             </div>
           ))}
         </div>
+
+        <div className="flex  w-[99%] h-10 ml-3 mt-3 justify-between items-center px-3">
+          <h2 className="font-sans font-semibold">Related Products</h2>
+
+          <div className="flex items-center gap-3">
+            <button className="w-10 h-10 bg-gray-200 text-gray-500 rounded-full flex items-center justify-center text-lg font-bold hover:bg-gray-300 transition">
+              ←
+            </button>
+
+            <button className="w-10 h-10 bg-gray-200 text-black rounded-full flex items-center justify-center text-lg font-bold hover:bg-green-600 transition">
+              →
+            </button>
+          </div>
+        </div>
+
+        <RelatedProducts />
       </Main>
     </div>
   );
